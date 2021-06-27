@@ -1,0 +1,177 @@
+2021-06-17 15:53:50.243  INFO 331 --- [main] t.c.p.interview.InterviewApplication     : Starting InterviewApplication using Java 11.0.11 on unknown with PID 331 (/home/frances/HOME/DEV/interview/target/classes started by frances in /home/frances/HOME/DEV/interview)
+2021-06-17 15:53:50.250  INFO 331 --- [main] t.c.p.interview.InterviewApplication     : No active profile set, falling back to default profiles: default
+2021-06-17 15:53:50.347  WARN 331 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-17 15:53:50.987  INFO 331 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-17 15:53:51.024  INFO 331 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 MongoDB repository interfaces.
+2021-06-17 15:53:51.498  INFO 331 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-17 15:53:51.504  INFO 331 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-17 15:53:51.504  INFO 331 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-17 15:53:51.549  INFO 331 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-17 15:53:51.550  INFO 331 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1236 ms
+2021-06-17 15:53:51.651  INFO 331 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[172.17.0.3:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-17 15:53:51.926 ERROR 331 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'adminAuthFilter': Unsatisfied dependency expressed through field 'authenticationManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.authentication.AuthenticationManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-06-17 15:53:51.943  INFO 331 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-06-17 15:53:51.946  WARN 331 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='60cb45df674945122f5efd51', description='null'}-172.17.0.3:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.11/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.11/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+ java.base@11.0.11/java.net.Socket.connect(Socket.java:609)
+ app//com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+ app//com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+ app//com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+ app//com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+ java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+2021-06-17 15:53:51.947  WARN 331 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-rtt-ClusterId{value='60cb45df674945122f5efd51', description='null'}-172.17.0.3:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.11/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.11/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+ java.base@11.0.11/java.net.Socket.connect(Socket.java:609)
+ app//com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+ app//com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+ app//com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+ app//com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.initialize(DefaultServerMonitor.java:421)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.run(DefaultServerMonitor.java:399)
+ java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+2021-06-17 15:53:51.948  WARN 331 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-06-17 15:53:51.957  INFO 331 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-17 15:53:51.969 ERROR 331 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field authenticationManager in tz.co.pesapal.interview.security.AdminAuthFilter required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+2021-06-17 15:54:42.172  INFO 462 --- [main] t.c.p.interview.InterviewApplication     : Starting InterviewApplication using Java 11.0.11 on unknown with PID 462 (/home/frances/HOME/DEV/interview/target/classes started by frances in /home/frances/HOME/DEV/interview)
+2021-06-17 15:54:42.174  INFO 462 --- [main] t.c.p.interview.InterviewApplication     : No active profile set, falling back to default profiles: default
+2021-06-17 15:54:42.220  WARN 462 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-17 15:54:42.530  INFO 462 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-17 15:54:42.556  INFO 462 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 MongoDB repository interfaces.
+2021-06-17 15:54:42.874  INFO 462 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-17 15:54:42.879  INFO 462 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-17 15:54:42.880  INFO 462 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-17 15:54:42.914  INFO 462 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-17 15:54:42.914  INFO 462 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 713 ms
+2021-06-17 15:54:42.989  INFO 462 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[172.17.0.3:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-17 15:54:43.981  INFO 462 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ac4e690, org.springframework.security.web.context.SecurityContextPersistenceFilter@608b35fa, org.springframework.security.web.header.HeaderWriterFilter@1aed6f0b, org.springframework.security.web.csrf.CsrfFilter@5a8d676e, org.springframework.security.web.authentication.logout.LogoutFilter@740c4868, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@72715e61, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1d55dd21, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6afeaf2d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4a4b288a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ebfb045, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dd1d2bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@365bfc5f, org.springframework.security.web.session.SessionManagementFilter@3d235635, org.springframework.security.web.access.ExceptionTranslationFilter@45707f76, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64757d56]
+2021-06-17 15:54:44.017  WARN 462 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-06-17 15:54:44.021  INFO 462 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-06-17 15:54:44.025  WARN 462 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='60cb46127db9473bc439a889', description='null'}-172.17.0.3:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.11/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.11/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+ java.base@11.0.11/java.net.Socket.connect(Socket.java:609)
+ app//com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+ app//com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+ app//com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+ app//com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+ java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+2021-06-17 15:54:44.026  WARN 462 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-rtt-ClusterId{value='60cb46127db9473bc439a889', description='null'}-172.17.0.3:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.11/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.11/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+ java.base@11.0.11/java.net.Socket.connect(Socket.java:609)
+ app//com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+ app//com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+ app//com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+ app//com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.initialize(DefaultServerMonitor.java:421)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.run(DefaultServerMonitor.java:399)
+ java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+2021-06-17 15:54:44.032  INFO 462 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-17 15:54:44.040 ERROR 462 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-06-17 15:55:23.687  INFO 693 --- [main] t.c.p.interview.InterviewApplication     : Starting InterviewApplication using Java 11.0.11 on unknown with PID 693 (/home/frances/HOME/DEV/interview/target/classes started by frances in /home/frances/HOME/DEV/interview)
+2021-06-17 15:55:23.698  INFO 693 --- [main] t.c.p.interview.InterviewApplication     : No active profile set, falling back to default profiles: default
+2021-06-17 15:55:24.065  WARN 693 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-17 15:55:25.184  INFO 693 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-17 15:55:25.215  INFO 693 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 MongoDB repository interfaces.
+2021-06-17 15:55:25.583  INFO 693 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-17 15:55:25.588  INFO 693 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-17 15:55:25.589  INFO 693 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-17 15:55:25.624  INFO 693 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-17 15:55:25.624  INFO 693 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1732 ms
+2021-06-17 15:55:25.705  INFO 693 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[172.17.0.3:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-17 15:55:26.878  INFO 693 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@580c17a0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f0e2bdc, org.springframework.security.web.header.HeaderWriterFilter@74fc3fc7, org.springframework.security.web.csrf.CsrfFilter@5bb97fe7, org.springframework.security.web.authentication.logout.LogoutFilter@7540160e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@779228dc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@77c692b4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@29d2fa84, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4cfc0c48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26463a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@608b35fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4540c7, org.springframework.security.web.session.SessionManagementFilter@46e388ec, org.springframework.security.web.access.ExceptionTranslationFilter@145a821d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7bc2bb58]
+2021-06-17 15:55:26.923  INFO 693 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-17 15:55:26.936  INFO 693 --- [main] t.c.p.interview.InterviewApplication     : Started InterviewApplication in 5.312 seconds (JVM running for 6.137)
+2021-06-17 15:55:26.937  INFO 693 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-17 15:55:26.939  INFO 693 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-17 15:55:28.795  INFO 693 --- [cluster-ClusterId{value='60cb463d811f8d3827ff4a50', description='null'}-172.17.0.3:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 172.17.0.3:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.2.3.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143) ~[mongodb-driver-core-4.2.3.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188) ~[mongodb-driver-core-4.2.3.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144) ~[mongodb-driver-core-4.2.3.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+Caused by: java.net.NoRouteToHostException: No route to host (Host unreachable)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107) ~[mongodb-driver-core-4.2.3.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.2.3.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.2.3.jar:na]
+	... 4 common frames omitted
+
+2021-06-17 15:57:31.368  INFO 1500 --- [main] t.c.p.interview.InterviewApplication     : Starting InterviewApplication using Java 11.0.11 on unknown with PID 1500 (/home/frances/HOME/DEV/interview/target/classes started by frances in /home/frances/HOME/DEV/interview)
+2021-06-17 15:57:31.370  INFO 1500 --- [main] t.c.p.interview.InterviewApplication     : No active profile set, falling back to default profiles: default
+2021-06-17 15:57:31.438  WARN 1500 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-17 15:57:31.776  INFO 1500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-17 15:57:31.804  INFO 1500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 MongoDB repository interfaces.
+2021-06-17 15:57:32.156  INFO 1500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-17 15:57:32.161  INFO 1500 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-17 15:57:32.161  INFO 1500 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-17 15:57:32.196  INFO 1500 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-17 15:57:32.196  INFO 1500 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 790 ms
+2021-06-17 15:57:32.271  INFO 1500 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[172.17.0.3:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-17 15:57:32.298  INFO 1500 --- [cluster-ClusterId{value='60cb46bc824220508184ed39', description='null'}-172.17.0.3:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to 172.17.0.3:27017
+2021-06-17 15:57:32.299  INFO 1500 --- [cluster-ClusterId{value='60cb46bc824220508184ed39', description='null'}-172.17.0.3:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=172.17.0.3:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=9586278}
+2021-06-17 15:57:32.298  INFO 1500 --- [cluster-rtt-ClusterId{value='60cb46bc824220508184ed39', description='null'}-172.17.0.3:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to 172.17.0.3:27017
+2021-06-17 15:57:33.184  INFO 1500 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@416b1265, org.springframework.security.web.context.SecurityContextPersistenceFilter@5fa0141f, org.springframework.security.web.header.HeaderWriterFilter@47be41c6, org.springframework.security.web.csrf.CsrfFilter@6caa4dc5, org.springframework.security.web.authentication.logout.LogoutFilter@75cacb3e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@75dc1c1c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1201e064, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2830315f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6afeaf2d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bbc21bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d6c4079, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@da22aa, org.springframework.security.web.session.SessionManagementFilter@7b3a6e95, org.springframework.security.web.access.ExceptionTranslationFilter@17354708, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24a8e40d]
+2021-06-17 15:57:33.223  INFO 1500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-17 15:57:33.231  INFO 1500 --- [main] t.c.p.interview.InterviewApplication     : Started InterviewApplication in 2.167 seconds (JVM running for 2.91)
+2021-06-17 15:57:33.232  INFO 1500 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-17 15:57:33.233  INFO 1500 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC

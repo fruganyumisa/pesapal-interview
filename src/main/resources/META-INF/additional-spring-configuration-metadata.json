@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "JWT_SECRET_KEY",
+      "type": "java.lang.String",
+      "description": "Description for JWT_SECRET_KEY."
+    },
+    {
+      "name": "JWT_EXPIRY",
+      "type": "java.lang.String",
+      "description": "Description for JWT_EXPIRY."
+    }
+  ] }
